@@ -107,7 +107,7 @@ function calc(){
   const n=xs*yp,vn=c.vn*xs,mah=c.mah*yp,a=c.a*yp,en=vn*mah/1000,cost=c.p*n;
   if(mot){
     const L=[["Potência",f(W,0)+" W"],["Tensão",f(V,0)+" V"],["Corrente",f(I,0)+" A"]];
-    if(W)L.push(["Tempo estimado de uso",f(Math.round(en/W*10)/10)+" h"]);
+    if(W)L.push(["Tempo de uso (Corrente max)",f(Math.round(en/W*10)/10)+" h"]);
     let au=A,co=C;
     if(C)au=Math.floor(en/C);else if(A)co=Math.floor(en/A);
     if(au)L.push(["Autonomia estimada",f(au,0)+" km"]);
